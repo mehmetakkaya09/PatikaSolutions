@@ -2,17 +2,24 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int r;
-        double pi = 3.14;
-        Scanner inp = new Scanner(System.in);
+        double kilo, boy, vke;
 
-        System.out.print("dairenin yarçapını giriniz : ");
 
-        r = inp.nextInt();
-        double alan = pi * r * r;
-        double cevre = 2 * pi * r;
-        System.out.println("dairenin alanı : " + alan);
-        System.out.println("dairenin cevresi :" + cevre);
+        Scanner input = new Scanner(System.in);
+        System.out.print("lütfen boyunuzu (metre cinsinde) giriniz : ");
+
+        boy = input.nextDouble();
+
+        System.out.print("lütfen kilonuzu giriniz : ");
+
+        kilo = input.nextDouble();
+
+        vke = (kilo) / (boy * boy);
+
+        String sonuc = (vke < 30) ? "zayıfsınız" : "kilolusunuz";
+
+        System.out.println("vücut kitle endeksiniz : " + vke);
+        System.out.println("endeks sonucunuz : " + sonuc);
 
     }
 }
