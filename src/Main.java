@@ -2,17 +2,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        double tutar, kdvOran = 0.18, kdvTutar, kdvliTutar;
-        Scanner input = new Scanner(System.in);
-        System.out.print("ücret tutarını giriniz : ");
-        tutar = input.nextDouble();
-        kdvTutar = tutar * kdvOran;
-        kdvliTutar = tutar + kdvTutar;
-        System.out.println("kdvsiztutar : " + tutar);
-        System.out.println("kdvoranı : " + kdvOran);
-        System.out.println("kdvtutarı : " + kdvTutar);
-        System.out.println("kdvtoplamı : " + kdvliTutar);
+        //değişkenlerimizi oluşturalım
+        int a, b;
+        double c;
 
+        //kullanıcıdan verilerimizi alalım
 
+        Scanner girdi = new Scanner(System.in);
+        System.out.print("1. kenarı giriniz : ");
+        a = girdi.nextInt();
+        System.out.print("2. kenarı giriniz : ");
+        b = girdi.nextInt();
+
+        c = Math.sqrt((a*a) + (b*b));
+        System.out.println("hipotenüs : " + c);
     }
 }
