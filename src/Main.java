@@ -2,19 +2,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //değişkenlerimizi oluşturalım
-        int a, b;
-        double c;
+        int r;
+        double pi = 3.14;
+        Scanner inp = new Scanner(System.in);
 
-        //kullanıcıdan verilerimizi alalım
+        System.out.print("dairenin yarçapını giriniz : ");
 
-        Scanner girdi = new Scanner(System.in);
-        System.out.print("1. kenarı giriniz : ");
-        a = girdi.nextInt();
-        System.out.print("2. kenarı giriniz : ");
-        b = girdi.nextInt();
+        r = inp.nextInt();
+        double alan = pi * r * r;
+        double cevre = 2 * pi * r;
+        System.out.println("dairenin alanı : " + alan);
+        System.out.println("dairenin cevresi :" + cevre);
 
-        c = Math.sqrt((a*a) + (b*b));
-        System.out.println("hipotenüs : " + c);
     }
 }
